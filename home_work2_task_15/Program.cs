@@ -1,4 +1,4 @@
-﻿Console.Write("Enter number a number: ");
+﻿Console.Write("Enter a number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 bool WeekEnd (int number)
