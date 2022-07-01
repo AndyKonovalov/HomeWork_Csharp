@@ -1,23 +1,18 @@
 ﻿Console.Write("Enter a five-digit number: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number <= 9999 ^ number >= 100000)
+string number = Console.ReadLine();
+int numberLength = number.Length; // just like array.Length
+if (numberLength <= 4 ^ numberLength >= 6) // five-digit number length = 5
 {
     Console.WriteLine("The number is not five-digit");
 }
-string str = number.ToString();
-if (str[0] == str[4] && str [1] == str [3])
-{
-    Console.WriteLine("Yes");
-}
 else
 {
-    Console.WriteLine("No");
+    if (number[0] == number[4] && number[1] == number[3])
+    {
+        Console.WriteLine("This is a palindrome");
+    }
+    else 
+    {
+        Console.WriteLine("This is not a palindrome");
+    }
 }
-// if ((number / 10000 == number % 10) && ((number / 1000) % 10 == (number / 10) % 10))
-// {
-//     Console.WriteLine((number / 10000 == number % 10) && ((number / 1000) % 10 == (number / 10) % 10));
-// }
-// else
-// {
-//     Console.WriteLine((number / 10000 == number % 10) && ((number / 1000) % 10 == (number / 10) % 10));
-// }
