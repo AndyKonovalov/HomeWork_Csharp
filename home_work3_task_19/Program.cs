@@ -2,7 +2,7 @@
 Console.Write("Enter a five-digit number: ");
 string number = Console.ReadLine();
 int numberLength = number.Length; // just like array.Length
-if (numberLength <= 4 ^ numberLength >= 6) // five-digit number length = 5, feature
+if (numberLength != 5) // five-digit number length = 5, feature
 {
     Console.WriteLine("The number is not five-digit");
 }
