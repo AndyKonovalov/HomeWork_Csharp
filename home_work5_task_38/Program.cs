@@ -29,8 +29,6 @@ if ((int.TryParse(number, out int size)) && (size > 0))
     {
         array[i] = Math.Round(new Random().NextDouble() * 40 - 20, 2);
     }
-    Console.WriteLine(MaxOfArray(max));
-    Console.WriteLine(MinOfArray(min));
     diffMaxMin = Math.Round(MaxOfArray(max) - MinOfArray(min), 2);
     Console.WriteLine($"Your array is [{String.Join("; ", array)}]. The difference between the maximum and minimum elements of the array = {diffMaxMin}");
 }
