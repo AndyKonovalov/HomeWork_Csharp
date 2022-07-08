@@ -4,7 +4,7 @@
 // массиве.
 Console.Write("Set the size of the array: ");
 string number = Console.ReadLine();
-if (int.TryParse(number, out int size))
+if ((int.TryParse(number, out int size)) && (size > 0))
 {
     int[] array = new int[size];
     int countEvenNumbers = 0;
@@ -16,9 +16,9 @@ if (int.TryParse(number, out int size))
             countEvenNumbers++;
         }
     }
-    Console.WriteLine($"Your array is [{String.Join("; ", array)}]. Count of even numbers in the array = {countEvenNumbers}");
+    Console.WriteLine($"Your array is [{String.Join("; ", array)}]. Count of all even numbers in the array = {countEvenNumbers}");
 }
 else
 {
-    Console.WriteLine("Entered data is not a number. Please, use integers");
+    Console.WriteLine("Entered data is not correct. Please, use positive integers greater than zero");
 }
