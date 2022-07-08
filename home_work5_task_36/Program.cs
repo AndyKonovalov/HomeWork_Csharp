@@ -19,5 +19,5 @@ if ((int.TryParse(number, out int size)) && (size > 0))
 }
 else
 {
-    Console.WriteLine("Entered data is not correct. Please, use positive integers");
+    Console.WriteLine("Entered data is not correct. Please, use positive integers greater than zero");
 }
