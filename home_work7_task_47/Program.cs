@@ -1,4 +1,7 @@
-﻿Console.Write("Set the size of matrix. Set the count of rows: ");
+﻿// Задача 47: Задайте двумерный массив размером m×n, 
+// заполненный случайными вещественными числами.
+
+Console.Write("Set the size of matrix. Set the count of rows: ");
 string countOfRows = Console.ReadLine();
 Console.Write("Set the size of matrix. Set the count of columns: ");
 string countOfColumns = Console.ReadLine();
