@@ -12,26 +12,26 @@ int[,] matrix = new int[size, size];
 
 for (perimeter = 0; perimeter < size - 2; perimeter++) // 0 - внешний периметр, все что > 0 - внутренний периметр. Количество периметров в матрице 4х4 - 2, поэтому size-2
 {
-    for (int i = 0 + perimeter; i < size - perimeter; i++)
+    for (int i = 0 + perimeter; i < size - perimeter; i++) 
     {
-        matrix[0 + perimeter, i] = element;
+        matrix[0 + perimeter, i] = element; // двигаемся вправо по строке
         element++;
     }
     element--;
 
-    for (int i = 0 + perimeter; i < size - perimeter; i++)
+    for (int i = 0 + perimeter; i < size - perimeter; i++) 
     {
-        matrix[i, size - 1 - perimeter] = element;
+        matrix[i, size - 1 - perimeter] = element; // двигаемся вниз по столбцу
         element++;
     }
     element--;
     for (int i = size - 1 - perimeter; i >= 0 + perimeter; i--)
     {
-        matrix[size - 1 - perimeter, i] = element;
+        matrix[size - 1 - perimeter, i] = element; // двигаемся влево по строке
         element++;
     }
     element--;
-    for (int i = size - 1 - perimeter; i >= 1 + perimeter; i--)
+    for (int i = size - 1 - perimeter; i >= 1 + perimeter; i--) // двигаемся вверх по столбцу
     {
         matrix[i, 0 + perimeter] = element;
         element++;
