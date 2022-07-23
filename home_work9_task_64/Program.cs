@@ -10,12 +10,20 @@ int valueN = Convert.ToInt32(Console.ReadLine());
 
 if (valueM != valueN && valueM >= 1)
 {
-    string FindNumbers(int start, int end)
+    if (valueM >= 1)
     {
-        if (start == end) return start.ToString();
-        return (start + ", " + FindNumbers(start + 1, end));
+        if (valueN > valueM)
+        {
+            string FindNumbers(int start, int end)
+            {
+                if (start == end) return start.ToString();
+                return (start + ", " + FindNumbers(start + 1, end));
+            }
+            Console.WriteLine(FindNumbers(valueM, valueN));
+        }
+        else Console.WriteLine("M должно быть меньше N");
     }
-
-    Console.WriteLine(FindNumbers(valueM, valueN));
-} else Console.WriteLine("M не должно равняться N и должно быть больше 0");
+    else Console.WriteLine("M должно быть больше 0");
+}
+else Console.WriteLine("M не должно равняться N и должно быть больше 0");
 
