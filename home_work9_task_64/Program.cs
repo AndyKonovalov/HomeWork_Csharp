@@ -25,5 +25,5 @@ if (valueM != valueN && valueM >= 1)
     }
     else Console.WriteLine("M должно быть больше 0");
 }
-else Console.WriteLine("M не должно равняться N и должно быть больше 0");
+else Console.WriteLine("M не должно равняться N");
 
